@@ -11,16 +11,16 @@ from io import BytesIO
 
 UPLOAD_FOLDER = './static/images/'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-application = Flask(__name__, template_folder='templates')
-application.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-application.config['SECRET_KEY'] = 'super secret key'
+app = Flask(__name__, template_folder='templates')
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['SECRET_KEY'] = 'super secret key'
 
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
-@application.route('/', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def upload_file():
 
     if request.method == 'POST':
@@ -110,4 +110,4 @@ def generate_cluster_image(test_label, img):
 
 
 if __name__ == '__main__':
-    application.run(debug=True)
+    app.run(debug=True)
