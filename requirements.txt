@@ -11,4 +11,4 @@ matplotlib
 numpy
 Pillow
 tensorflow-cpu
-scikit-learn==0.24.2
+scikit-learn
