@@ -8,6 +8,7 @@ import joblib
 import base64
 from PIL import Image
 from io import BytesIO
+import wsgi
 
 UPLOAD_FOLDER = './static/images/'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
@@ -110,4 +111,4 @@ def generate_cluster_image(test_label, img):
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
