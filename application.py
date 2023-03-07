@@ -8,7 +8,6 @@ import joblib
 import base64
 from PIL import Image
 from io import BytesIO
-import wsgi
 
 UPLOAD_FOLDER = './static/images/'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
