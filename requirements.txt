@@ -1,0 +1,12 @@
+Click
+Flask
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+joblib==1.2.0
+keras==2.11.0
+matplotlib
+numpy
+Pillow
